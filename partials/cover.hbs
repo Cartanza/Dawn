@@ -1,17 +1,17 @@
 <div class="cover gh-outer">
     <div class="cover-content gh-inner">
-        {{#if @site.icon}}
+        {{#if @root.site.icon}}
             <div class="cover-icon">
-                <img class="cover-icon-image" src="{{@site.icon}}" alt="{{@site.title}}">
+                <img class="cover-icon-image" src="{{@root.site.icon}}" alt="{{@root.site.title}}">
             </div>
         {{/if}}
 
-        {{#if @site.description}}
-            <div class="cover-description">{{@site.description}}</div>
+        {{#if @root.site.description}}
+            <div class="cover-description">{{@root.site.description}}</div>
         {{/if}}
 
-        {{#if @site.members_enabled}}
-            {{#unless @member}}
+        {{#if @root.site.members_enabled}}
+            {{#unless @root.member}}
             <div class="cover-cta">
                 <button class="button members-subscribe" data-portal="signup">Subscribe now</button>
                 <button class="button button-secondary members-login" data-portal="signin">Login</button>
